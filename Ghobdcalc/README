@@ -1,0 +1,42 @@
+Ghobdcalc (hexadecimal, Octal, Binary, Decimal calculator)
+an multibase calculator with several functionnalities.
+
+for installation simply type:
+
+  $ ./configure          # This will perform a system check and set some variables.
+  $ make                 # This will build the shared and the static library
+  $ sudo make install    # This will install Ghobdcalc on your system.
+
+for uninstall Ghobdcalc simply type:
+
+  $ sudo make uninstall  # This will remove Ghobdcalc fully from your system.
+
+
+Credits:
+
+  Thank's to my beloved mother, my family and the doctors.
+  Stay away from drugs: drugs destroy your brain and life.  
+
+License
+                                                                                        
+ Ghobdcalc is a little multibases calculator with severals functionnalities.
+ Ghobdcalc (C) 2014 Brüggemann Eddie (Alias mrcyberfighter).                          
+                                                                                 
+ This file is part of Ghobdcalc.                                  
+ Ghobdcalc is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by            
+ the Free Software Foundation, either version 3 of the License, or               
+ (at your option) any later version.                                             
+                                                                                 
+ Ghobdcalc is distributed in the hope that it will be useful,       
+ but WITHOUT ANY WARRANTY; without even the implied warranty of                   
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                    
+ GNU General Public License for more details.                                    
+                                                                                 
+ You should have received a copy of the GNU General Public License               
+ along with Ghobdcalc. If not, see <http://www.gnu.org/licenses/> 
+                                                                                 
+
+
+Copyright (C) GPLv3 2014 Brüggemann Eddie <mrcyberfighter@gmail.com>.
+

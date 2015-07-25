@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ghobdcalc
+Comment=Perform arithmetic, scientific or financial calculations
+Keywords=calculation;arithmetic;scientific;financial;
+Icon=/usr/share/Ghobdcalc/Icon/Ghobdcalc_icon.png
+Exec=/usr/bin/Ghobdcalc
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Utility;Calculator;

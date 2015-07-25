@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title>Ghobdcalc</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="ghobdcalc">
+<h1 class="title">Ghobdcalc</h1>
+
+<blockquote>
+<p><strong>Ghobdcalc</strong>: An multibase calculator with several functionnalities.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Writing by:</th><td class="field-body"><strong>Eddie Brüggemann</strong></td>
+</tr>
+<tr class="field"><th class="field-name">Language:</th><td class="field-body"><strong>C</strong></td>
+</tr>
+<tr class="field"><th class="field-name">Writing start:</th><td class="field-body">31/10/2014</td>
+</tr>
+<tr class="field"><th class="field-name">Writing end:</th><td class="field-body">13/12/2014</td>
+</tr>
+<tr class="field"><th class="field-name">Revision:</th><td class="field-body">None</td>
+</tr>
+<tr class="field"><th class="field-name">Contact:</th><td class="field-body">&lt;<a class="reference external" href="mailto:mrcyberfighter&#64;gmail.com">mrcyberfighter&#64;gmail.com</a>&gt;</td>
+</tr>
+<tr class="field"><th class="field-name">Credits:</th><td class="field-body">Thank's to my mother, my family and to the doctors.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<div class="section" id="main-description">
+<h1>Main Description</h1>
+<blockquote>
+<blockquote>
+<p><strong>Ghobdcalc</strong> (for Graphical Hexadecimal Octal Binar Decimal Calculator), build</p>
+<p>on the developpment files from the <a class="reference external" href="https://github.com/mrcyberfighter/libHOBDCalc">libHOBDCalc</a>.</p>
+<p>With <strong>GTK+3</strong> as HMI (Human Machine Interface):</p>
+<p>an multibase calculator with several functionnalities...</p>
+</blockquote>
+<ul>
+<li><p class="first"><strong>Ghobdcalc</strong> support 4 differents bases as entry values or converting output</p>
+<blockquote>
+<p>format:</p>
+<p>-) The <strong>decimal base</strong>.</p>
+<p>-) The <strong>binar base</strong>.</p>
+<p>-) The <strong>octal base</strong>.</p>
+<p>-) The <strong>hexadecimal base</strong>.</p>
+<!--  -->
+<blockquote>
+<p>You can entry values in the wanted base and convert the value in any</p>
+<p>supported base by hitting the corresponding toggle button wich will set</p>
+<p>the current base andor converting the current value in the wanted base.</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p class="first">Ghobdcalc support signed integer values limited</p>
+<p>from <em>9223372036854775807</em> to <em>-9223372036854775808</em>.</p>
+<p>and signed floating-point values composed from 19 digits in decimal base.</p>
+<p>The same limits are apply to values in the other supported bases.</p>
+<p>What permit the computing for the most purpose.</p>
+<p>So Ghobdcalc is limited to values encoded on 8 bytes.</p>
+</li>
+</ul>
+</blockquote>
+<div class="section" id="ghobdcalc-provide-several-calculator-functionnalities">
+<h2><strong>Ghobdcalc</strong> provide several calculator functionnalities:</h2>
+<blockquote>
+<ul>
+<li><p class="first">The <strong>ERASE</strong> button erase one digit from the current value.</p>
+</li>
+<li><p class="first">The <strong>DELETE</strong> button erase all digits from the current value.</p>
+</li>
+<li><dl class="first docutils">
+<dt>The <strong>REVERT</strong> button set the result of an operation as first operand</dt>
+<dd><p class="first last">value. With which you can continue chain operations.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>The <strong>ENTER</strong> button compute the result from two operand and give the</dt>
+<dd><p class="first last">result in the current set base.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">The <strong>RESET</strong> button reset all fields.</p>
+</li>
+<li><p class="first">The basic operators buttons:</p>
+<ul>
+<li><p class="first">The <strong>+</strong> button set the operation to be an addition, by displaying</p>
+<p>an <strong>+</strong> sign in the operator filed.</p>
+</li>
+<li><p class="first">The <strong>-</strong> button set the operation to be an substraction, by</p>
+<p>displaying an <strong>-</strong> sign in the operator field.</p>
+</li>
+<li><p class="first">The <strong>×</strong> button set the operation to be an multiplication, by</p>
+<p>displaying an <strong>×</strong> sign in the operator field.</p>
+</li>
+<li><p class="first">The <strong>÷</strong> button set the operation to be an division, by displaying</p>
+<p>an <strong>÷</strong> sign in the operator field.</p>
+</li>
+<li><p class="first">The <strong>%</strong> button set the operation to be an Euclidian division,</p>
+<p>what perform the division from the two operands and give the rest</p>
+<p>of the entire values division, by displaying an <strong>%</strong> sign in the</p>
+<p>operator field.</p>
+</li>
+</ul>
+<p>You must press the <strong>=</strong> or <strong>ENTER</strong> button to perform the operation.</p>
+<p>What permit to change the operator before result computing.</p>
+<p>You can change the operator even after having hit the <strong>=</strong> or <strong>ENTER</strong></p>
+<p>button and the second operand can be edit after hit an operator button.</p>
+</li>
+</ul>
+</blockquote>
+<div class="section" id="the-mathematic-specific-operators-button">
+<h3>The mathematic specific operators button:</h3>
+<blockquote>
+<ul>
+<li><p class="first">The <strong>DEG</strong> or <strong>RAD</strong> toggle buttons set the values to be take in charge</p>
+<p>as degrees if the <strong>DEG</strong> button is down or</p>
+<p>as radians if the <strong>RAD</strong> button is down.</p>
+</li>
+<li><p class="first">The <strong>COS</strong> button convert the current value in the cosine</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>SIN</strong> button convert the current value in the sine</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>TAN</strong> button convert the current value in the tangent</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>ACOS</strong> button convert the current value in the arccosine</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>ASIN</strong> button convert the current value in the arcsine</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>ATAN</strong> button convert the current value in the arctangent</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>COSH</strong> button convert the current value in the hyperbel cosine</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>SINH</strong> button convert the current value in the hyperbel sine</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>TANH</strong> button convert the current value in the hyperbel tangent</p>
+<p>from the current value in relationship to the current metric</p>
+<p>(degrees or radians).</p>
+</li>
+<li><p class="first">The <strong>SQRT</strong> button convert the current value in his square root value.</p>
+</li>
+<li><p class="first">The <strong>ABS</strong> button convert the current value in his absolute value.</p>
+</li>
+<li><p class="first">The <strong>POW</strong> button is different because it need 2 values to compute an</p>
+<p>power:</p>
+<p>The base: the first operand. After define it press the <strong>POW</strong> button</p>
+<p>to set the exponent as the second operand and finally press the <strong>POW</strong></p>
+<p>button again to compute the power.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="the-memory-functionnalities">
+<h3>The memory functionnalities:</h3>
+<blockquote>
+<blockquote>
+Ghobdcalc provide an memory for registering specific values for resusing it later.</blockquote>
+<ul>
+<li><p class="first">The <strong>MEM ADD</strong> button add the current value to the memory.</p>
+</li>
+<li><p class="first">The <strong>MEM DEL</strong> button delete the memory entry pointed from the memory</p>
+<p>navigating curser.</p>
+</li>
+<li><p class="first">The <strong>MEM GET</strong> button set the memory entry pointed from the memory</p>
+<p>navigating curser as current operand.</p>
+</li>
+<li><p class="first">The <strong>MEM NAV</strong> button display the memory entry pointed from the memory</p>
+<p>navigating in the top bar.</p>
+</li>
+<li><p class="first">The <strong>MEM NAV (+)</strong> button increment the memory navigating pointer.</p>
+</li>
+<li><p class="first">The <strong>MEM NAV (-)</strong> button decrement the memory navigating pointer.</p>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="the-saving-export-functionnalities">
+<h3>The saving &amp; export functionnalities:</h3>
+<blockquote>
+<p>Ghobdcalc provide an mechanic to save the content of operations and</p>
+<p>export it as an computing datasheet in 3 differents files format.</p>
+<ul>
+<li><p class="first">The <strong>SAVING</strong> button save the current operation for exporting it in</p>
+<blockquote>
+<p>the computing datasheet.</p>
+</blockquote>
+</li>
+<li><p class="first">The <strong>Export as</strong> button reachable throught the menu button will</p>
+<blockquote>
+<p>display an export settings windows where you can set how the</p>
+<p>datasheet will be generate.</p>
+</blockquote>
+<p>You can export the saved operations as</p>
+<ul>
+<li><p class="first">An formatted text file.</p>
+</li>
+<li><p class="first">An simple csv (Comma Separated Value) file.</p>
+<p>Chart with multiple columns.</p>
+</li>
+<li><p class="first">An high configurable html file.</p>
+<p>where the operations are presented in an table.</p>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<div class="section" id="this-programm-is-under-copyright-from-the-gpl-gnu-general-public-license">
+<h4>This programm is under copyright from the GPL GNU GENERAL PUBLIC LICENSE</h4>
+<!--  -->
+<blockquote>
+<p><strong>Ghobdcalc</strong> (for Graphical Hexadecimal Octal Binar Decimal Calculator)</p>
+<p>an multibase calculator with several functionnalities...</p>
+<p>Copyright (C) 2014 Brüggemann Eddie.</p>
+<p>This file is part of <strong>Ghobdcalc</strong>.</p>
+<p><strong>Ghobdcalc</strong> is free software: you can redistribute it and/or modify</p>
+<p>it under the terms of the GNU General Public License as published by</p>
+<p>the Free Software Foundation, either version 3 of the License, or</p>
+<p>(at your option) any later version.</p>
+<p><strong>Ghobdcalc</strong> is distributed in the hope that it will be useful,</p>
+<p>but WITHOUT ANY WARRANTY; without even the implied warranty of</p>
+<p>MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</p>
+<p>GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License</p>
+<p>along with <strong>Ghobdcalc</strong>. If not, see &lt;<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
